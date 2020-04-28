@@ -44,12 +44,12 @@ The measurements will be:
 
 |                 | Godot | Unity |
 | --------------- | ----- | ----- |
-| 60 FPS drop at: | ----- | ----- |
-| 30 FPS drop at: | ----- | ----- |
+| 60 FPS drop at: | 1080  | 5400  |
+| 30 FPS drop at: | 1170  | 6300  |
 
 #### Android
 
 |                 | Godot | Unity |
 | --------------- | ----- | ----- |
-| 60 FPS drop at: | ----- | 700   |
-| 30 FPS drop at: | ----- | 1000  |
+| 60 FPS drop at: | never | 700   |
+| 30 FPS drop at: | 180   | 1000  |
