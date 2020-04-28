@@ -31,5 +31,5 @@ func _on_timer_timeout():
 	
 	cubes = cubes+1
 	
-	text.text = "Cubes: " + str(cubes) + "\nFPS: " + str(Engine.get_frames_per_second())
+	text.text = "GODOT PERFORMANCE 3D: \nPlatform: " + OS.get_name() + "\nCubes: " + str(cubes) + "\nFPS: " + str(Engine.get_frames_per_second())
 
