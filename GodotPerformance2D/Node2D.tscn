@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Ball.tscn" type="PackedScene" id=1]
+[ext_resource path="res://stage.png" type="Texture" id=2]
+[ext_resource path="res://Generator.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 352 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 624, 8 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="RigidBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 173.583, 50.8434 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="ColliderLeft" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 8, 360 )
+shape = SubResource( 1 )
+
+[node name="ColliderRight" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1272, 360 )
+shape = SubResource( 1 )
+
+[node name="ColliderBot" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 640, 712 )
+shape = SubResource( 2 )
+
+[node name="Generator" type="Node2D" parent="."]
+position = Vector2( 640, -100 )
+script = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 64.0
+margin_top = 32.0
+margin_right = 104.0
+margin_bottom = 46.0
+text = "Stats"
+__meta__ = {
+"_edit_use_anchors_": false
+}
