@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Materials/PlaneMaterial.tres" type="Material" id=1]
 [ext_resource path="res://Generator.gd" type="Script" id=2]
+[ext_resource path="res://ARIAL.TTF" type="DynamicFontData" id=3]
 
 [sub_resource type="Environment" id=1]
 ambient_light_color = Color( 0.909804, 0.87451, 0.87451, 1 )
@@ -9,6 +10,10 @@ ambient_light_color = Color( 0.909804, 0.87451, 0.87451, 1 )
 [sub_resource type="PlaneMesh" id=2]
 
 [sub_resource type="BoxShape" id=3]
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+font_data = ExtResource( 3 )
 
 [node name="Spatial" type="Spatial"]
 
@@ -46,13 +51,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Text" type="RichTextLabel" parent="Control"]
-anchor_left = 25.0
-anchor_right = 25.0
-margin_left = -713.624
-margin_top = 111.391
-margin_right = -113.624
-margin_bottom = 411.391
+[node name="Text" type="Label" parent="Control"]
+margin_left = 71.6634
+margin_top = 46.7764
+margin_right = 736.663
+margin_bottom = 294.776
+custom_fonts/font = SubResource( 4 )
 text = "Stats"
 __meta__ = {
 "_edit_use_anchors_": false
