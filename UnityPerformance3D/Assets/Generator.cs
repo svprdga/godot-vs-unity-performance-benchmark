@@ -12,20 +12,34 @@ public class Generator : MonoBehaviour {
     int cubes = 0;
 
     const float fpsMeasurePeriod = 0.5f;
-    private int m_FpsAccumulator = 0;
-    private float m_FpsNextPeriod = 0;
-    private int m_CurrentFps;
+    private int fpsAccumulate = 0;
+    private float fpsNextPeriod = 0;
+    private int currentFps;
+
+    private string platform;
+
+    void Awake() {
+        if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsEditor) {
+            platform = "Windows";
+        } else if (Application.platform == RuntimePlatform.LinuxPlayer || Application.platform == RuntimePlatform.LinuxEditor) {
+            platform = "Linux";
+        } else if (Application.platform == RuntimePlatform.Android) {
+            platform = "Android";
+        } else {
+            platform = "Unknown";
+        }
+    }
 
     void Update() {
-        targetTime -= Time.deltaTime;
-
-        // measure average frames per second
-        m_FpsAccumulator++;
-        if (Time.realtimeSinceStartup > m_FpsNextPeriod) {
-            m_CurrentFps = (int) (m_FpsAccumulator / fpsMeasurePeriod);
-            m_FpsAccumulator = 0;
-            m_FpsNextPeriod += fpsMeasurePeriod;
+        // FPS measure.
+        fpsAccumulate++;
+        if (Time.realtimeSinceStartup > fpsNextPeriod) {
+            currentFps = (int) (fpsAccumulate / fpsMeasurePeriod);
+            fpsAccumulate = 0;
+            fpsNextPeriod += fpsMeasurePeriod;
         }
+
+        targetTime -= Time.deltaTime;
 
         if (targetTime <= 0f) {
 
@@ -47,7 +61,10 @@ public class Generator : MonoBehaviour {
             Instantiate(cube, vector, Quaternion.identity);
             cubes++;
 
-            text.text = "Cubes: " + cubes + "\nFPS: " + m_CurrentFps;
+            text.text = "UNITY PERFORMANCE 3D: \n" +
+                "Platform: " + platform + "\n" +
+                "Cubes: " + cubes + "\n" +
+                "FPS: " + currentFps;
 
             targetTime = 0.1f;
         }
