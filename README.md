@@ -7,6 +7,11 @@ The requirements for the 3D benchmark are:
 - To display a window of 1280x720.
 - To instantiate a cube each 0.1 seconds and let it drop to a physical plane.
 
+The requirements for the 2D benchmark will be pretty similar:
+
+- To display a window of 1280x720.
+- To instantiate a 2D ball each 0.1 seconds and let it drop to a box.
+
 The measurements will be:
 
 - With how many cubes the demo starts dropping clearly below 60 FPS.
@@ -33,23 +38,44 @@ The measurements will be:
 
 (*) The values indicate approximately around which number of cubes the frames are dropping.
 
-#### Windows
+#### Windows 3D
 
 |                 | Godot | Unity |
 | --------------- | ----- | ----- |
 | 60 FPS drop at: | 1130  | 6100  |
 | 30 FPS drop at: | 1160  | 7200  |
 
-#### Linux
+#### Windows 2D
+
+|                 | Godot | Unity |
+| --------------- | ----- | ----- |
+| 60 FPS drop at: | 1700  | 1000  |
+| 30 FPS drop at: | 1750  | 1100  |
+
+#### Linux 3D
 
 |                 | Godot | Unity |
 | --------------- | ----- | ----- |
 | 60 FPS drop at: | 1080  | 5400  |
 | 30 FPS drop at: | 1170  | 6300  |
 
-#### Android
+#### Linux 2D
+
+|                 | Godot | Unity |
+| --------------- | ----- | ----- |
+| 60 FPS drop at: |   |   |
+| 30 FPS drop at: |   |   |
+
+#### Android 3D
 
 |                 | Godot | Unity |
 | --------------- | ----- | ----- |
 | 60 FPS drop at: | never | 700   |
 | 30 FPS drop at: | 180   | 1000  |
+
+#### Android 2D
+
+|                 | Godot | Unity |
+| --------------- | ----- | ----- |
+| 60 FPS drop at: |  |  300  |
+| 30 FPS drop at: |    |  340 |
