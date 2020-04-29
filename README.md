@@ -38,44 +38,44 @@ The measurements will be:
 
 (*) The values indicate approximately around which number of cubes the frames are dropping.
 
-#### Windows 3D
+### Windows 3D
 
 |                 | Godot | Unity |
 | --------------- | ----- | ----- |
 | 60 FPS drop at: | 1130  | 6100  |
 | 30 FPS drop at: | 1160  | 7200  |
 
-#### Windows 2D
+### Windows 2D
 
 |                 | Godot | Unity |
 | --------------- | ----- | ----- |
 | 60 FPS drop at: | 1700  | 1000  |
 | 30 FPS drop at: | 1750  | 1100  |
 
-#### Linux 3D
+### Linux 3D
 
 |                 | Godot | Unity |
 | --------------- | ----- | ----- |
 | 60 FPS drop at: | 1080  | 5400  |
 | 30 FPS drop at: | 1170  | 6300  |
 
-#### Linux 2D
+### Linux 2D
 
 |                 | Godot | Unity |
 | --------------- | ----- | ----- |
-| 60 FPS drop at: |   |   |
-| 30 FPS drop at: |   |   |
+| 60 FPS drop at: | 1800  | 1150  |
+| 30 FPS drop at: | 1900  | 1150  |
 
-#### Android 3D
+### Android 3D
 
 |                 | Godot | Unity |
 | --------------- | ----- | ----- |
 | 60 FPS drop at: | never | 700   |
 | 30 FPS drop at: | 180   | 1000  |
 
-#### Android 2D
+### Android 2D
 
 |                 | Godot | Unity |
 | --------------- | ----- | ----- |
-| 60 FPS drop at: |  |  300  |
-| 30 FPS drop at: |    |  340 |
+| 60 FPS drop at: | 350   |  300  |
+| 30 FPS drop at: | 460   |  340  |
