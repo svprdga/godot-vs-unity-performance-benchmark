@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Runtime.InteropServices;
 
 public class Generator : MonoBehaviour {
+    
+    [DllImport("__Internal")]
+    private static extern string GetUserAgent();
 
     public GameObject ball;
     public Text text;
@@ -25,6 +29,8 @@ public class Generator : MonoBehaviour {
             platform = "Linux";
         } else if (Application.platform == RuntimePlatform.Android) {
             platform = "Android";
+        } else if (Application.platform == RuntimePlatform.WebGLPlayer) {
+            platform = GetUserAgent();
         } else {
             platform = "Unknown";
         }

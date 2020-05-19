@@ -27,4 +27,8 @@ func _on_timer_timeout():
 	
 	balls = balls+1
 	
-	text.text = "GODOT PERFORMANCE 2D: \nPlatform: " + OS.get_name() + "\nBalls: " + str(balls) + "\nFPS: " + str(Engine.get_frames_per_second())
+	var os_name = OS.get_name()
+	if OS.has_feature('JavaScript') and os_name == "HTML5":
+		os_name = JavaScript.eval("navigator.userAgent")
+	
+	text.text = "GODOT PERFORMANCE 2D: \nPlatform: " + os_name + "\nBalls: " + str(balls) + "\nFPS: " + str(Engine.get_frames_per_second())

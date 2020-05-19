@@ -45,10 +45,11 @@ script = ExtResource( 3 )
 [node name="Label" type="Label" parent="."]
 margin_left = 64.0
 margin_top = 32.0
-margin_right = 104.0
-margin_bottom = 46.0
+margin_right = 1219.0
+margin_bottom = 670.0
 custom_fonts/font = SubResource( 3 )
 text = "Stats"
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

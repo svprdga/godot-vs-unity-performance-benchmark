@@ -31,5 +31,9 @@ func _on_timer_timeout():
 	
 	cubes = cubes+1
 	
-	text.text = "GODOT PERFORMANCE 3D: \nPlatform: " + OS.get_name() + "\nCubes: " + str(cubes) + "\nFPS: " + str(Engine.get_frames_per_second())
+	var os_name = OS.get_name()
+	if OS.has_feature('JavaScript') and os_name == "HTML5":
+		os_name = JavaScript.eval("navigator.userAgent")
+	
+	text.text = "GODOT PERFORMANCE 3D: \nPlatform: " + os_name + "\nCubes: " + str(cubes) + "\nFPS: " + str(Engine.get_frames_per_second())
 
