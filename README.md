@@ -25,10 +25,12 @@ The measurements will be:
 
 ## Test results
 
-### Tests devices
+### Devices/software used
 
 - Desktop tests were driven in a laptop with a i7-8750H CPU, SDRAM DDR4-2666, NVMe hard drive.
 - Mobile tests were driven in a Samsung Galaxy A3.
+- Chrome version 81.0.4044.138 running in Windows 10 Pro.
+- Firefox version: 76.0.1 running in Windows 10 Pro.
 
 ### OS
 
@@ -38,44 +40,78 @@ The measurements will be:
 
 (*) The values indicate approximately around which number of cubes the frames are dropping.
 
-### Windows 3D
+### Native builds tests
+
+#### Windows 3D
 
 |                 | Godot | Unity |
 | --------------- | ----- | ----- |
 | 60 FPS drop at: | 1130  | 6100  |
 | 30 FPS drop at: | 1160  | 7200  |
 
-### Windows 2D
+#### Windows 2D
 
 |                 | Godot | Unity |
 | --------------- | ----- | ----- |
 | 60 FPS drop at: | 1700  | 1000  |
 | 30 FPS drop at: | 1750  | 1100  |
 
-### Linux 3D
+#### Linux 3D
 
 |                 | Godot | Unity |
 | --------------- | ----- | ----- |
 | 60 FPS drop at: | 1080  | 5400  |
 | 30 FPS drop at: | 1170  | 6300  |
 
-### Linux 2D
+#### Linux 2D
 
 |                 | Godot | Unity |
 | --------------- | ----- | ----- |
 | 60 FPS drop at: | 1800  | 1150  |
 | 30 FPS drop at: | 1900  | 1150  |
 
-### Android 3D
+### Android tests
+
+#### Android 3D
 
 |                 | Godot | Unity |
 | --------------- | ----- | ----- |
 | 60 FPS drop at: | never | 700   |
 | 30 FPS drop at: | 180   | 1000  |
 
-### Android 2D
+#### Android 2D
 
 |                 | Godot | Unity |
 | --------------- | ----- | ----- |
 | 60 FPS drop at: | 350   |  300  |
 | 30 FPS drop at: | 460   |  340  |
+
+### WebGL tests
+
+#### Chrome 3D
+
+|                 | Godot | Unity |
+| --------------- | ----- | ----- |
+| 60 FPS drop at: | 345   | 1445  |
+| 30 FPS drop at: | 360   | 1805  |
+
+#### Firefox 3D
+
+|                 | Godot | Unity |
+| --------------- | ----- | ----- |
+| 60 FPS drop at: | 220   | 860   |
+| 30 FPS drop at: | 370   | 1575  |
+
+#### Chrome 2D
+
+|                 | Godot | Unity |
+| --------------- | ----- | ----- |
+| 60 FPS drop at: | 1190  | 650   |
+| 30 FPS drop at: | 1430  | 1010  |
+
+#### Firefox 2D
+
+|                 | Godot | Unity |
+| --------------- | ----- | ----- |
+| 60 FPS drop at: | 950   | 720   |
+| 30 FPS drop at: | 1080  | 880   |
